@@ -1,4 +1,3 @@
-guess.js
 
 class GuessingGame{
     constructor(){
@@ -44,3 +43,4 @@ class GuessingGame{
     }
     
 }
+ 
