@@ -1,5 +1,6 @@
 
 var secretNumber;
+
 function guess_start(){
 	secretNumber = pickRandomNumber(1,10);
 	attachHandlers();
