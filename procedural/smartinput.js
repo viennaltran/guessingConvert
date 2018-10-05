@@ -34,6 +34,23 @@ class SmartInput{
 		this.fadeClear = this.fadeClear.bind(this);
 		this.prepInput();
 	}
+	getValue(){
+		return this.attributes.element.val();
+	}
+	setValue(newValue){
+		if(!this.attributes.testPattern.test(newValue)){
+			return false
+		}
+		if(this.testNum && newValue<this.attributes.minNum){
+			return false
+		}
+		if(this.testNum && newValue>this.attributes.maxNum){
+			return false
+		}	
+		this.attributes.element.val(newValue);
+		return true;
+	}
+	/* private methods */
 	prepInput(){
 		if(this.attributes.preventBadInput){
 			this.attributes.element.on('keydown',this.testInput);
@@ -121,3 +138,8 @@ class SmartInput{
 		this.errorContainer.text('');
 	}
 }
+
+
+
+
+
