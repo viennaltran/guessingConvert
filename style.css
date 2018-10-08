@@ -1,0 +1,10 @@
+.errorContainer{
+	position: absolute;
+	top: 100%;
+	color: red;
+	left: 0%;
+	background-color: white;
+}
+.inputContainer{
+	position: relative;
+}
